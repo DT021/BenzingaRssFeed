@@ -19,25 +19,27 @@ struct postView: View {
                 
                 HStack(spacing: 10){
                     
-                    AvatarView(image: "benzingaPs", size: 70)
                     VStack(alignment: .leading, spacing: 3){ 
                         Text(post.title).font(.headline)
                         Text(post.link).font(.footnote)
-                        
                     }
                     
                 }
                 
-                // post content - specify nil for multi-line text
-                Text(post.description ?? "").lineLimit(nil).font(.body)
             }
-        }.onAppear(){
-            BenzingaData().getData()
         }
         
         
     }
     
 }
+
+struct basicView: View{
+    var body: some View {
+        Text("ayy lmao")
+    }
+}
+
+
 
 

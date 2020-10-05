@@ -69,10 +69,6 @@ class BenzingaData: NSObject, XMLParserDelegate, ObservableObject {
     }
     
     
-//    func getPosts() -> [BenzingaDataObject]{
-//        return self.RssPosts
-//    }
-    
     //parser delegate methods
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         if elementName == "item" {
@@ -103,6 +99,8 @@ class BenzingaData: NSObject, XMLParserDelegate, ObservableObject {
                 title += data
             case "description":
                 itemDescription += data
+            case "link":
+                link += data
             default:
                 break
             }

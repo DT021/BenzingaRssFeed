@@ -10,8 +10,6 @@ import WebKit
 
 struct ContentView: View {
     
-    //    let posts = BenzingaData()
-    
     var postData: [BenzingaDataObject] = []
     
     @ObservedObject var rssPostData : BenzingaData
@@ -44,8 +42,6 @@ struct ContentView: View {
         self.rssPostData = BenzingaData()
         let appearance = UINavigationBarAppearance()
         appearance.configureWithTransparentBackground()
-        appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red]
-        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.green]
     }
     
 }

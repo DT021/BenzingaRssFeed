@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import BenzingaRss
+//@testable import BenzingaRss
 
 class BenzingaRssTests: XCTestCase {
 

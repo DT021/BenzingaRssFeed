@@ -16,6 +16,14 @@
 		7B398BF3252B67D200EB09F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B398BF1252B67D200EB09F9 /* LaunchScreen.storyboard */; };
 		7B398BFE252B67D300EB09F9 /* BenzingaRssTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398BFD252B67D300EB09F9 /* BenzingaRssTests.swift */; };
 		7B398C09252B67D300EB09F9 /* BenzingaRssUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C08252B67D300EB09F9 /* BenzingaRssUITests.swift */; };
+		7B398C1A252B696200EB09F9 /* testUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C19252B696200EB09F9 /* testUserModel.swift */; };
+		7B398C1F252B69E400EB09F9 /* postModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C1E252B69E400EB09F9 /* postModel.swift */; };
+		7B398C24252B6AA700EB09F9 /* testUserPostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C23252B6AA700EB09F9 /* testUserPostData.swift */; };
+		7B398C29252B6AF800EB09F9 /* postView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C28252B6AF800EB09F9 /* postView.swift */; };
+		7B398C2E252B6DB900EB09F9 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C2D252B6DB900EB09F9 /* AvatarView.swift */; };
+		7B398C33252B951900EB09F9 /* BZGeneralFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C32252B951900EB09F9 /* BZGeneralFeedModel.swift */; };
+		7B398C38252B969100EB09F9 /* BenzingaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C37252B969100EB09F9 /* BenzingaData.swift */; };
+		7B398C48252B9B5C00EB09F9 /* BenzingaDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C47252B9B5C00EB09F9 /* BenzingaDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,14 @@
 		7B398C04252B67D300EB09F9 /* BenzingaRssUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BenzingaRssUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B398C08252B67D300EB09F9 /* BenzingaRssUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenzingaRssUITests.swift; sourceTree = "<group>"; };
 		7B398C0A252B67D300EB09F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B398C19252B696200EB09F9 /* testUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUserModel.swift; sourceTree = "<group>"; };
+		7B398C1E252B69E400EB09F9 /* postModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postModel.swift; sourceTree = "<group>"; };
+		7B398C23252B6AA700EB09F9 /* testUserPostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUserPostData.swift; sourceTree = "<group>"; };
+		7B398C28252B6AF800EB09F9 /* postView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postView.swift; sourceTree = "<group>"; };
+		7B398C2D252B6DB900EB09F9 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		7B398C32252B951900EB09F9 /* BZGeneralFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BZGeneralFeedModel.swift; sourceTree = "<group>"; };
+		7B398C37252B969100EB09F9 /* BenzingaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenzingaData.swift; sourceTree = "<group>"; };
+		7B398C47252B9B5C00EB09F9 /* BenzingaDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenzingaDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +118,16 @@
 			isa = PBXGroup;
 			children = (
 				7B398BE3252B67D200EB09F9 /* AppDelegate.swift */,
+				7B398C37252B969100EB09F9 /* BenzingaData.swift */,
+				7B398C47252B9B5C00EB09F9 /* BenzingaDataModel.swift */,
 				7B398BE5252B67D200EB09F9 /* SceneDelegate.swift */,
 				7B398BE7252B67D200EB09F9 /* ContentView.swift */,
+				7B398C28252B6AF800EB09F9 /* postView.swift */,
+				7B398C2D252B6DB900EB09F9 /* AvatarView.swift */,
+				7B398C19252B696200EB09F9 /* testUserModel.swift */,
+				7B398C32252B951900EB09F9 /* BZGeneralFeedModel.swift */,
+				7B398C1E252B69E400EB09F9 /* postModel.swift */,
+				7B398C23252B6AA700EB09F9 /* testUserPostData.swift */,
 				7B398BEC252B67D200EB09F9 /* Assets.xcassets */,
 				7B398BF1252B67D200EB09F9 /* LaunchScreen.storyboard */,
 				7B398BF4252B67D200EB09F9 /* Info.plist */,
@@ -269,9 +293,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B398C1A252B696200EB09F9 /* testUserModel.swift in Sources */,
+				7B398C1F252B69E400EB09F9 /* postModel.swift in Sources */,
+				7B398C33252B951900EB09F9 /* BZGeneralFeedModel.swift in Sources */,
+				7B398C48252B9B5C00EB09F9 /* BenzingaDataModel.swift in Sources */,
+				7B398C29252B6AF800EB09F9 /* postView.swift in Sources */,
+				7B398C24252B6AA700EB09F9 /* testUserPostData.swift in Sources */,
 				7B398BE4252B67D200EB09F9 /* AppDelegate.swift in Sources */,
 				7B398BE6252B67D200EB09F9 /* SceneDelegate.swift in Sources */,
 				7B398BEB252B67D200EB09F9 /* BenzingaRss.xcdatamodeld in Sources */,
+				7B398C2E252B6DB900EB09F9 /* AvatarView.swift in Sources */,
+				7B398C38252B969100EB09F9 /* BenzingaData.swift in Sources */,
 				7B398BE8252B67D200EB09F9 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

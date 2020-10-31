@@ -7,13 +7,22 @@
 
 import Foundation
 
-class BenzingaData: NSObject, XMLParserDelegate, ObservableObject {
+
+class BenzingaNetworking: NSObject, XMLParserDelegate, ObservableObject {
     
-    var generalURL = URL(string: "https://www.benzinga.com/general/feed")!
+    static var generalURL = URL(string: "https://www.benzinga.com/fintech/feed")!
+    static var generalURLstring = "general"
     
+    
+    enum DataFetchResult{
+        case success
+        case failed
+    }
     
     
     @Published var RssPosts = [BenzingaDataObject]()
+    
+    var localRssPostData = [BenzingaDataObject]()
     
     var title: String = String()
     
@@ -24,22 +33,45 @@ class BenzingaData: NSObject, XMLParserDelegate, ObservableObject {
     var elementName: String = String()
     
     
-    func getData(){
+    override init() {
+        super.init()
+        getData(completion: { DataFetchResult in
+            switch DataFetchResult{
+            case .failed:
+                print("FAILED")
+            case .success:
+                print("SUCCEEDED initial")
+            }
+        })
+        
+    }
+    
+    
+    func getData(string: String? = generalURLstring, completion: @escaping (DataFetchResult)->()) {
         print("lol did this work???")
         
-        let task = URLSession.shared.dataTask(with: generalURL) { [self] data, response, error in
+        guard let searchString = string, let searchURL = urlFactory(searchString: searchString) else {return}
+        let task = URLSession.shared.dataTask(with: searchURL) { [self] data, response, error in
             guard let data = data, error == nil else {
                 print(error ?? "Unknown error")
                 return
             }
+            
+//            var parseSucceeded = true
 
             DispatchQueue.main.async {
-                if let parser = XMLParser(contentsOf: self.generalURL ){
+                localRssPostData.removeAll()
+                if let parser = XMLParser(contentsOf: searchURL ){
                     parser.delegate = self
                     if parser.parse(){
                         print()
+                        completion(.success)
+                    }else{
+                        print("parse if statement failed")
+                        completion(.failed)
+//                        parseSucceeded = false
                     }
-                    print("oh hello!")
+                    
                 }
             }
         }
@@ -47,11 +79,9 @@ class BenzingaData: NSObject, XMLParserDelegate, ObservableObject {
         
     }
     
-    
-    override init() {
-        super.init()
-        getData()
-        
+    func urlFactory(searchString: String) -> URL?{
+        let urlString = "https://www.benzinga.com/" + searchString + "/feed"
+        return URL(string: urlString)
     }
     
     
@@ -69,7 +99,7 @@ class BenzingaData: NSObject, XMLParserDelegate, ObservableObject {
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "item"{
             let dataObj = BenzingaDataObject(title: title, link: link, description: itemDescription)
-            RssPosts.append(dataObj)
+            localRssPostData.append(dataObj)
             print(dataObj)
         }
     }
@@ -95,6 +125,12 @@ class BenzingaData: NSObject, XMLParserDelegate, ObservableObject {
         print(parseError)
         
     }
+    
+    func parserDidEndDocument(_ parser: XMLParser){
+        //great success
+        RssPosts = localRssPostData
+    }
+
     
 
 }

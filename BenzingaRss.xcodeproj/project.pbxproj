@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7B398BE4252B67D200EB09F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398BE3252B67D200EB09F9 /* AppDelegate.swift */; };
 		7B398BE6252B67D200EB09F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398BE5252B67D200EB09F9 /* SceneDelegate.swift */; };
-		7B398BE8252B67D200EB09F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398BE7252B67D200EB09F9 /* ContentView.swift */; };
 		7B398BEB252B67D200EB09F9 /* BenzingaRss.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B398BE9252B67D200EB09F9 /* BenzingaRss.xcdatamodeld */; };
 		7B398BED252B67D200EB09F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B398BEC252B67D200EB09F9 /* Assets.xcassets */; };
 		7B398BF0252B67D200EB09F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B398BEF252B67D200EB09F9 /* Preview Assets.xcassets */; };
@@ -22,8 +21,9 @@
 		7B398C29252B6AF800EB09F9 /* postView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C28252B6AF800EB09F9 /* postView.swift */; };
 		7B398C2E252B6DB900EB09F9 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C2D252B6DB900EB09F9 /* AvatarView.swift */; };
 		7B398C33252B951900EB09F9 /* BZGeneralFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C32252B951900EB09F9 /* BZGeneralFeedModel.swift */; };
-		7B398C38252B969100EB09F9 /* BenzingaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C37252B969100EB09F9 /* BenzingaData.swift */; };
+		7B398C38252B969100EB09F9 /* BenzingaNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C37252B969100EB09F9 /* BenzingaNetworking.swift */; };
 		7B398C48252B9B5C00EB09F9 /* BenzingaDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398C47252B9B5C00EB09F9 /* BenzingaDataModel.swift */; };
+		7BE41E042548AB3400D17EBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B398BE7252B67D200EB09F9 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,7 @@
 		7B398C28252B6AF800EB09F9 /* postView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postView.swift; sourceTree = "<group>"; };
 		7B398C2D252B6DB900EB09F9 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		7B398C32252B951900EB09F9 /* BZGeneralFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BZGeneralFeedModel.swift; sourceTree = "<group>"; };
-		7B398C37252B969100EB09F9 /* BenzingaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenzingaData.swift; sourceTree = "<group>"; };
+		7B398C37252B969100EB09F9 /* BenzingaNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenzingaNetworking.swift; sourceTree = "<group>"; };
 		7B398C47252B9B5C00EB09F9 /* BenzingaDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenzingaDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,15 +118,10 @@
 			isa = PBXGroup;
 			children = (
 				7B398BE3252B67D200EB09F9 /* AppDelegate.swift */,
-				7B398C37252B969100EB09F9 /* BenzingaData.swift */,
-				7B398C47252B9B5C00EB09F9 /* BenzingaDataModel.swift */,
+				7B398C37252B969100EB09F9 /* BenzingaNetworking.swift */,
 				7B398BE5252B67D200EB09F9 /* SceneDelegate.swift */,
-				7B398BE7252B67D200EB09F9 /* ContentView.swift */,
-				7B398C28252B6AF800EB09F9 /* postView.swift */,
-				7B398C2D252B6DB900EB09F9 /* AvatarView.swift */,
-				7B398C19252B696200EB09F9 /* testUserModel.swift */,
-				7B398C32252B951900EB09F9 /* BZGeneralFeedModel.swift */,
-				7B398C1E252B69E400EB09F9 /* postModel.swift */,
+				7BE41DFD2548AAE200D17EBE /* Views */,
+				7BE41DFC2548AAD400D17EBE /* Models */,
 				7B398C23252B6AA700EB09F9 /* testUserPostData.swift */,
 				7B398BEC252B67D200EB09F9 /* Assets.xcassets */,
 				7B398BF1252B67D200EB09F9 /* LaunchScreen.storyboard */,
@@ -161,6 +156,27 @@
 				7B398C0A252B67D300EB09F9 /* Info.plist */,
 			);
 			path = BenzingaRssUITests;
+			sourceTree = "<group>";
+		};
+		7BE41DFC2548AAD400D17EBE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7B398C47252B9B5C00EB09F9 /* BenzingaDataModel.swift */,
+				7B398C19252B696200EB09F9 /* testUserModel.swift */,
+				7B398C32252B951900EB09F9 /* BZGeneralFeedModel.swift */,
+				7B398C1E252B69E400EB09F9 /* postModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7BE41DFD2548AAE200D17EBE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7B398BE7252B67D200EB09F9 /* ContentView.swift */,
+				7B398C2D252B6DB900EB09F9 /* AvatarView.swift */,
+				7B398C28252B6AF800EB09F9 /* postView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +311,7 @@
 			files = (
 				7B398C1A252B696200EB09F9 /* testUserModel.swift in Sources */,
 				7B398C1F252B69E400EB09F9 /* postModel.swift in Sources */,
+				7BE41E042548AB3400D17EBE /* ContentView.swift in Sources */,
 				7B398C33252B951900EB09F9 /* BZGeneralFeedModel.swift in Sources */,
 				7B398C48252B9B5C00EB09F9 /* BenzingaDataModel.swift in Sources */,
 				7B398C29252B6AF800EB09F9 /* postView.swift in Sources */,
@@ -303,8 +320,7 @@
 				7B398BE6252B67D200EB09F9 /* SceneDelegate.swift in Sources */,
 				7B398BEB252B67D200EB09F9 /* BenzingaRss.xcdatamodeld in Sources */,
 				7B398C2E252B6DB900EB09F9 /* AvatarView.swift in Sources */,
-				7B398C38252B969100EB09F9 /* BenzingaData.swift in Sources */,
-				7B398BE8252B67D200EB09F9 /* ContentView.swift in Sources */,
+				7B398C38252B969100EB09F9 /* BenzingaNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,14 +490,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BenzingaRss/Preview Content\"";
-				DEVELOPMENT_TEAM = 5N9D43J473;
+				DEVELOPMENT_TEAM = YU4H46ZK2C;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BenzingaRss/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.myers.BenzingaRss;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myers.BenzingaRssplz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -495,7 +511,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BenzingaRss/Preview Content\"";
-				DEVELOPMENT_TEAM = 5N9D43J473;
+				DEVELOPMENT_TEAM = XDTGN7GC82;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BenzingaRss/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

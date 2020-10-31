@@ -14,10 +14,8 @@ struct postView: View {
     let benzingaPs = UIImage(named: "benzingaPs")
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            VStack(alignment: .leading) {
                 
-                HStack(spacing: 10){
+                HStack{
                     
                     VStack(alignment: .leading, spacing: 3){ 
                         Text(post.title).font(.headline)
@@ -25,9 +23,6 @@ struct postView: View {
                     }
                     
                 }
-                
-            }
-        }
         
         
     }
@@ -43,3 +38,9 @@ struct basicView: View{
 
 
 
+
+struct postView_Previews: PreviewProvider {
+    static var previews: some View {
+        postView(post: BenzingaDataObject(title: "test title here", link: "www.heresalink.com", description: "yo check this out"))
+    }
+}
